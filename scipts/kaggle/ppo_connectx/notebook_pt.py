@@ -15,7 +15,7 @@ from stable_baselines3.common.monitor import load_results
 from stable_baselines3.common.torch_layers import NatureCNN
 from stable_baselines3.common.policies import ActorCriticPolicy, ActorCriticCnnPolicy
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
-from submission_random import agent as agent_r
+from submission_random2 import agent as agent_r
 
 # %%
 # ConnectX wrapper from Alexis' notebook.
@@ -96,7 +96,7 @@ learner.policy
 # %%
 %%time
 learner.load("random_ppo_01")
-learner.learn(total_timesteps=100_0, )
+learner.learn(total_timesteps=100_00, )
 learner.save("random_ppo_02")
 # %%
 df = load_results(log_dir)['r']
